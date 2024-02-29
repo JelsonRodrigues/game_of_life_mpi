@@ -1,12 +1,6 @@
 #include "./include/main.h"
 #include "./include/game_of_life.h"
 
-struct WorkerParameters {
-    std::vector<std::vector<uint8_t>> matrix;
-    size_t rowBegin;
-    size_t numberOfRows;
-};
-
 enum MESSAGE_TAG {
   MATRIX_DATA = 0,
   MATRIX_SIZE = 1,
