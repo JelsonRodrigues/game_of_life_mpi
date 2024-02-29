@@ -23,9 +23,9 @@ std::tuple<std::vector<std::vector<uint8_t>>, size_t> update_rows(
         }
       }
 
-      new_grid[i - row_begin][j] = sum == 2 || 
-                       sum == 3 ||
-                       sum == 4;
+      new_grid[i - row_begin][j] = (sum == 2 || 
+                                    sum == 3) && 
+                                    !(sum == 4);
     }
   }
 
